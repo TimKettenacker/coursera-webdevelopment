@@ -1,5 +1,11 @@
 
 /********** Base styles **********/
+/* the body block below overwrites the standard browser visualization (so-called user-agent-stylesheet), by setting it back to 0 */ 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 * {
     box-sizing: border-box;
   }
@@ -17,9 +23,10 @@
     margin-left: auto;
     font-family: Helvetica;
     color: white;
+    padding: 10px;
   }
 
-  
+
   /* Simple Responsive Framework. */
   .row {
     width: 100%;
