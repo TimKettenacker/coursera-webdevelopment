@@ -23,8 +23,3 @@ body {
 .navbar-brand a:hover, .navbar-brand a:focus {
     text-decoration: none;
 }
-
-.navlist {
-    margin-top: 10px;
-    text-align: center;
-}
