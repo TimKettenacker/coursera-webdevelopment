@@ -32,3 +32,14 @@ for (var i = 0; i < 10; i++) {
     sum = sum + i;
 }
 console.log(sum);
+
+var company = new Object();
+company.name = "Amazon";
+company["stock price"] = 1456;
+console.log(company);
+
+function multiply(x, y) {
+    return x*y;
+}
+
+console.log(multiply(7,2));
