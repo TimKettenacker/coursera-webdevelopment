@@ -43,3 +43,28 @@ function multiply(x, y) {
 }
 
 console.log(multiply(7,2));
+
+var array = new Array();
+array[0] = "Tim";
+array[1] = 3;
+console.log(array[0]);
+
+var array1 = ["3", 3, 44]
+
+for (var i = 0; i < array1.length; i++) {
+    console.log(array1[i])
+}
+
+var myObj = {
+    name: "Tim",
+    course: "Coursera"
+};
+
+for (var prop in myObj){
+    console.log(myObj[prop])
+}
+
+//IIFE
+(function (name) {
+    console.log("Hello " + name);
+})("Tim");
