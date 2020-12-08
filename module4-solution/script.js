@@ -1,70 +1,34 @@
-var x;
-console.log(x);
 
-if (x == undefined) {
-    console.log("x is undefined")
-}
-
-var string = "Hello";
-string += "World";
-console.log(string);
-
-var x = 4, y = 4;
-if (x == y) {
-    console.log("s gleiche")
-}
-
-x = "4";
-if (x == y) {
-    console.log("s gleiche")
-}
-
-//strict equality
-x = "4";
-if (x === y) {
-    console.log("s gleiche")
-} else {
-    console.log("jetzt nimmer")
-}
-
-var sum = 0;
-for (var i = 0; i < 10; i++) {
-    sum = sum + i;
-}
-console.log(sum);
-
-var company = new Object();
-company.name = "Amazon";
-company["stock price"] = 1456;
-console.log(company);
-
-function multiply(x, y) {
-    return x*y;
-}
-
-console.log(multiply(7,2));
-
-var array = new Array();
-array[0] = "Tim";
-array[1] = 3;
-console.log(array[0]);
-
-var array1 = ["3", 3, 44]
-
-for (var i = 0; i < array1.length; i++) {
-    console.log(array1[i])
-}
-
-var myObj = {
-    name: "Tim",
-    course: "Coursera"
+/*Hello speaker function*/
+const helloSpeaker = {
+	speakWord: 'Hello',	
+};
+(function () {
+	helloSpeaker.speak = function (userName) {
+		return (helloSpeaker.speakWord + " " + userName);
+	}
+}());
+/*Goodbye speaker function*/
+const byeSpeaker = {
+	speakWord: 'Good Bye'
 };
 
-for (var prop in myObj){
-    console.log(myObj[prop])
-}
-
-//IIFE
-(function (name) {
-    console.log("Hello " + name);
-})("Tim");
+(function () {
+	byeSpeaker.speak = function (userName) {
+		return (byeSpeaker.speakWord + " " + userName);
+	}
+}());
+(function () {
+	var names = ['Yaakov', 'John', 'Jen', 'Jason', 'Paul', 'Frank', 'Larry', 'Paula', 'Laura', 'Jim'];
+	for (var i = 0; i < names.length; i++) {
+		var name = names[i];
+		var firstLetter = name.charAt(0).toLowerCase();
+		if (firstLetter === 'j') {
+			console.log(byeSpeaker.speak(name));
+			document.write(byeSpeaker.speak(name) + '<br>');
+		} else {
+			console.log(helloSpeaker.speak(name));
+			document.write(helloSpeaker.speak(name + '<br>'));
+		}
+	}
+})();
